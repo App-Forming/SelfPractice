@@ -19,7 +19,7 @@ class EmployeeDetailViewController: UIViewController {
 
     
     func registerTableViewCell(){
-        self.title = "Device MVC Pattern"
+        self.title = "Device List with MVC"
         self.listView.register(UINib(nibName: "DataTableViewCell", bundle: nil), forCellReuseIdentifier: "DataTableViewCell")
         self.listView.delegate = self
         self.listView.dataSource = self

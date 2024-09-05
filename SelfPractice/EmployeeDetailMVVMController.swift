@@ -12,17 +12,15 @@ class EmployeeDetailMVVMController: UIViewController {
     private var employeesVModel = EmployeeViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.setUpTableview()
         self.bindViewModel()
     }
     
     func setUpTableview(){
-        self.title = "Device MVVM Pattern"
+        self.title = "Device List with MVVM"
         self.listView.register(UINib(nibName: "DataTableViewCell", bundle: nil), forCellReuseIdentifier: "DataTableViewCell")
         self.listView.delegate = self
         self.listView.dataSource = self
-        //Height
         self.listView.estimatedRowHeight = 999
         self.listView.rowHeight = UITableView.automaticDimension
     }
@@ -58,7 +56,3 @@ extension EmployeeDetailMVVMController:UITableViewDelegate,UITableViewDataSource
     
 }
 
-extension EmployeeDetailMVVMController{
-    
-
-}
